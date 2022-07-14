@@ -5,12 +5,19 @@
     */
 
     //ENTRADA
-
-
+    const numero1 = Number(prompt("informe o primeiro valor:"))
+    const numero2 = Number(prompt("informe o segundo valor:"))
+    const numero3 = Number(prompt("informe o terceiro valor:"))
     //PROCESSAMENTO
-
-    
-    //SAÍDA
+    if (numero1<numero2 && numero1<numero3 && numero2<numero3) {
+        document.write(`${numero3} , ${numero2} , ${numero1} `)
+    } else if (numero2<numero1 && numero2<numero3 && numero3<numero1) {
+        document.write(`${numero1} , ${numero3} , ${numero2}`)
+    } else  if (numero2<numero3 && numero1<numero3 && numero1<numero2) {
+        document.write(`${numero3} , ${numero2} , ${numero1}`)
+    } else if (numero2<numero3 && numero1<numero3 && numero1<numero2) {
+        
+    }
 
 
 </script>
