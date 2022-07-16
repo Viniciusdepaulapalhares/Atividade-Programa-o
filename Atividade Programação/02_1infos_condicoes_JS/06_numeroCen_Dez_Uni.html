@@ -11,53 +11,35 @@
     */
 
         const numero = parseInt(prompt("informe um numero:"))
-        let fator 
+        let mensagem = ``
 
-        const centenas = numero/100;
-        const dezena = (centenas*10) %10;
-        const unidades =  (numero %100 ) %10;
+        if (numero < 1000) {
+            const centenas = Math.floor(numero/100)
+            const dezenas = Math.floor(numero/10)-(centenas*10)
+            const unidades = numero - Math.floor(numero / 10)*100
+            if (centenas > 0) {
+                mensagem += `${centenas} centena`
+                if (centenas >1) mensagem += `s`
 
-        if (numero<1000 && centenas > 1 && dezena > 1 && unidades > 1) {
-            fator = `${Math.floor (centenas)}centenas e ${Math.floor (dezena)}dezenas e ${Math.floor (unidades)}unidades`
-        } 
-        
-        else if (numero<1000 && centenas ===0 && dezena > 1 && unidades > 1) {
-            fator = `${Math.floor (centenas)}centena e ${Math.floor (dezena)}dezenas e ${Math.floor (unidades)}unidades`
-        } 
-        
-        else if 
-            (numero<1000 && centenas ===0 && dezena > 1 && unidades > 1) {
-            fator = `${Math.floor (centenas)}centena e ${Math.floor (dezena)}dezenas e ${Math.floor (unidades)}unidades`
+                if (dezenas > 0 || unidades > 0){
+                    if (dezenas > 0 && unidades > 0) mensagem += ` , ` 
+                    else mensagem += ` e `
+                }
+            }
+            if (dezenas > 0 ) {
+                mensagem += `${dezenas} dezena`
+                if (dezenas>1) mensagem += `s`
+                
+                if (unidades > 0) mensagem += ` e ` 
+            }
+            if (unidades > 0) {
+                mensagem += `${unidades} unidade `
+
+                if (dezenas>1) mensagem += `s`
+            }
         }
 
-
-
-
-
-
-
-
-
-/*else if (numero<1000 && dezena > 1 && unidades > 1) {
-            fator = `${Math.floor (dezena)} e ${Math.floor (unidades)}`} 
-            else if (numero<1000 && unidades > 1) {
-            fator = `${Math.floor (unidades)}`}
-
-                document.write(fator);*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        document.write(mensagem)
 
 
 
