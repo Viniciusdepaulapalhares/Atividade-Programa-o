@@ -10,15 +10,72 @@
     Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
     */
 
-    //ENTRADA
-        const numero = Number(prompt("informe um numero:"))
+        const numero = parseInt(prompt("informe um numero:"))
         let fator 
 
-    //PROCESSAMENTO
+        const centenas = numero/100;
+        const dezena = (centenas*10) %10;
+        const unidades =  (numero %100 ) %10;
+
+        if (numero<1000 && centenas > 1 && dezena > 1 && unidades > 1) {
+            fator = `${Math.floor (centenas)}centenas e ${Math.floor (dezena)}dezenas e ${Math.floor (unidades)}unidades`
+        } 
+        
+        else if (numero<1000 && centenas ===0 && dezena > 1 && unidades > 1) {
+            fator = `${Math.floor (centenas)}centena e ${Math.floor (dezena)}dezenas e ${Math.floor (unidades)}unidades`
+        } 
+        
+        else if 
+            (numero<1000 && centenas ===0 && dezena > 1 && unidades > 1) {
+            fator = `${Math.floor (centenas)}centena e ${Math.floor (dezena)}dezenas e ${Math.floor (unidades)}unidades`
+        }
 
 
-    
-    //SAÍDA
+
+
+
+
+
+
+
+/*else if (numero<1000 && dezena > 1 && unidades > 1) {
+            fator = `${Math.floor (dezena)} e ${Math.floor (unidades)}`} 
+            else if (numero<1000 && unidades > 1) {
+            fator = `${Math.floor (unidades)}`}
+
+                document.write(fator);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
