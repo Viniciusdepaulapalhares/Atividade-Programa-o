@@ -5,13 +5,13 @@
     Dica: utilize uma função de arredondamento.
     */
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
+    const numero = Number(prompt("Informe o numero:"))
+    let fator
+    if (numero)fator = `${(numero)} Inteiro`
     
-    //SAÍDA
+    else {
+        fator = `${numero.toFixed(2)} Decimal`
+    }
 
-
+    document.write(fator)
 </script>
