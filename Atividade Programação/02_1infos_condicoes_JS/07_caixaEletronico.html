@@ -8,7 +8,7 @@
     */
    
     let valorSaque = parseInt(prompt("digite o valor do saque"))
-    let mensagemFinal
+    let mensagemFinal = ``
 
     if (valorSaque >= 10 && valorSaque <= 600) {
         const notasCem = Math.floor(valorSaque/100) 
@@ -22,9 +22,11 @@
         const notasUm = valorSaque % 5
         if (notasCem > 0) mensagemFinal += `Notas de Cem ${notasCem}<br>`
         if (notasCinquenta > 0) mensagemFinal += `Notas de Cem ${notasCinquenta}<br>`
-        if (notasDez > 0) mensagemFinal = `Notas de Cem ${notasCem}<br>`
-        if (notasCinco > 0) mensagemFinal = `Notas de Cem ${notasCem}<br>`
-        if (notasUm > 0) mensagemFinal = `Notas de Cem ${notasCem}<br>`
+        if (notasDez > 0) mensagemFinal = mensagemFinal +`Notas de Cem ${notasCem}<br>`
+        if (notasCinco > 0) mensagemFinal = mensagemFinal + `Notas de Cem ${notasCem}<br>`
+        if (notasUm > 0) mensagemFinal = mensagemFinal + `Notas de Cem ${notasCem}<br>`
+    } else{
+        mensagemFinal = `Valor Invalido`
     }
 
 
