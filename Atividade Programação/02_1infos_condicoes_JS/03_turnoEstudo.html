@@ -13,23 +13,21 @@
 
     //ENTRADA
 
-        const turno = prompt("informe o turno M-matutino ou V-Vespertino ou N- Noturno:").toLocaleUpperCase()
+    const turno = prompt("digite se seu turn é M-matutino ou V-Vespertino ou N- Noturno.").toUpperCase()
 
     //PROCESSAMENTO
 
-        let fator
+     let fator 
 
-        if (turno==="M") {
-           fator = `Bom dia`
-        } else if (turno==="V") {
-           fator = `Boa tarde`
-        } else if (turno==="N") {
-            fator = `Boa noite`
-        } else {
-            fator = `Valor invalido`
-        }
-    
-    //SAÍDA
-        document.write (fator)
+     if (turno === "M") 
+    fator= `seu turno é matutino`    
+     else if (turno === "V") 
+    fator= `seu turno é vespetino`  
+    else if (turno === "N") 
+    fator= `seu turno é noturno`
+    else{
+        fator = `valor invalido`
+    }
 
+    document.write(fator)
 </script>
